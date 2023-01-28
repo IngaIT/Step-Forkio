@@ -7,4 +7,3 @@
 // }
 
 // burger.addEventListener('click', handlerBurger);
-//# sourceMappingURL=script.min.js.map

@@ -1,0 +1,22 @@
+@import "fonts.scss";
+@import "header.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Lato;
+}
+
+a, ul, li {
+    list-style: none;
+    text-decoration: none;
+}
+
+.wrapper {
+    max-width: 1220px;
+    margin: auto;
+}
