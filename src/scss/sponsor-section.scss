@@ -1,0 +1,91 @@
+.section {
+    &__background {
+        background-image: url(../img/testmonials-bg.png);
+        height: fit-content;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    &__title {
+        font-weight: 700;
+        font-size: 48px;
+        color: #fff;
+        text-align: center;
+        padding: 108px 10px 75px;
+
+    }
+
+    &__contents {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 113px 0;
+        padding: 0 10px;
+    }
+
+    &__content {
+        text-align: center;
+            &:nth-child(3) &-paragraph{
+                margin-top: 22px;
+            }
+            &:nth-child(3) &-img{
+                margin-top: -6px;
+            }
+            &-paragraph {
+                max-width: 350px;
+                font-family: 'Lato';
+                font-style: italic;
+                font-weight: 700;
+                font-size: 16px;
+                color: #fff;
+                margin-top: 30px;
+            }
+    }
+
+    &__footer-paragraph {
+        font-family: 'Lato';
+        font-size: 14px;
+        color: #A291A5;
+        max-width: 900px;
+        text-align: center;
+        margin: 0 auto;
+        padding: 119px 10px 26px;
+            &:after {
+                content: '';
+                display: block;
+                height: 2px;
+                background: #645766;
+                margin-top: 19px;
+            }
+    }
+}
+
+@media (min-width: 481px) and (max-width: 992.98px) {
+    .section__title {
+        font-size: 42px;
+    }
+
+    .section__contents {
+        gap: 60px 0;
+    }
+
+    .section__content {
+        &:nth-child(3) &-img{
+        margin-top: -15px;
+        }
+        &:nth-child(4) &-img{
+            margin-top: 15px;
+        }
+    }
+}
+
+@media (min-width: 481px) and (max-width: 720px) {
+    .section__content {
+        width: 50%;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480.98px) {
+
+}
