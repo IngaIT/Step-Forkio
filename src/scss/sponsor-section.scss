@@ -64,6 +64,7 @@
 @media (min-width: 481px) and (max-width: 992.98px) {
     .section__title {
         font-size: 42px;
+        padding: 86px 10px 80px;
     }
 
     .section__contents {
@@ -87,5 +88,17 @@
 }
 
 @media (min-width: 320px) and (max-width: 480.98px) {
+    .section__title {
+        font-size: 36px;
+        padding: 86px 10px 80px;
+    }
 
+    .section__contents {
+        justify-content: center;
+        gap: 45px 0;
+    }
+
+    .section__footer-paragraph {
+        padding: 37px 10px 22px;
+    }
 }
