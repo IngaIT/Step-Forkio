@@ -1,0 +1,171 @@
+.our-benefits {
+  background: #f4f4f4;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'a a a a b b b b'
+      'a a a a c c c c'
+      'a a a a c c c c'
+      'a a a a c c c c'
+      '. . . . c c c c';
+  }
+
+  &__code-img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+  }
+
+  &__header {
+    @include font($main-font, 700, 48px, 50px, normal);
+    color: $select-color;
+    margin: 0 0 20px 20px;
+  }
+
+  &__list {
+    display: grid;
+    row-gap: 30px;
+    max-width: 540px;
+    list-style: none;
+    padding: 0;
+    text-align: start;
+
+    &-el {
+      @include grid(grid, center, center);
+      grid-template-columns: 1fr 2fr;
+    }
+
+    &-header {
+      @include font($main-font, 400, 16px, 21px, normal);
+      color: #323232;
+      margin-bottom: 17px;
+    }
+
+    &-paragraph {
+      @include font($main-font, 400, 14px, 21px, normal);
+      color: #848e97;
+    }
+  }
+}
+
+.grid-item-1 {
+  grid-area: a;
+}
+
+.grid-item-2 {
+  grid-area: b;
+}
+
+.grid-item-3 {
+  grid-area: c;
+}
+
+
+@media screen and (min-width: 481px) and (max-width: 992px) {
+  .our-benefits {
+    background: $accent-color;
+
+    &__list {
+      max-width: 960px;
+      row-gap: 60px;
+      padding: 0 10px 0 10px;
+
+
+      &-el {
+        @include grid(grid, center, center);
+        grid-template-columns: 1fr 4fr;
+      }
+
+      &-header {
+        line-height: 16px;
+      }
+    }
+
+    &__header {
+      padding: 0 10px 50px 10px;
+      margin: 0;
+      text-align: center;
+    }
+
+    &__list {
+      margin-left: 0;
+      margin-bottom: 70px;
+    }
+
+    &__container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-top: 95px;
+      grid-template-areas:
+        "b b b b b b b b"
+        "a a a a a a a a"
+        "a a a a a a a a"
+        "a a a a a a a a"
+        ". . . . c c c c"
+        ". . . . c c c c"
+        ". . . . c c c c";
+    }
+  }
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .our-benefits {
+    background: $accent-color;
+
+    &__list {
+      max-width: 960px;
+      row-gap: 60px;
+      padding: 0 10px 0 10px;
+
+      &-el {
+        @include grid(grid, center, center);
+        grid-template-columns: 1fr 4fr;
+      }
+    }
+
+    &__header {
+      padding: 0 10px 30px 10px;
+      margin: 0;
+      text-align: center;
+      @include font($main-font, 700, 32px, 38px, normal);
+    }
+
+    &__list {
+      margin-left: 0;
+      margin-bottom: 70px;
+    }
+
+    &__container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-top: 0;
+      grid-template-areas:
+        "b b b b b b b b"
+        "a a a a a a a a"
+        "a a a a a a a a"
+        "a a a a a a a a"
+        ". . . . c c c c"
+        ". . . . c c c c"
+        ". . . . c c c c";
+    }
+
+    &__list {
+      text-align: center;
+      row-gap: 10px;
+
+      &-el {
+        row-gap: 10px;
+        @include grid(grid, center, center);
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+      }
+    }
+  }
+}
+

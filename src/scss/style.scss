@@ -1,6 +1,12 @@
-@import "fonts.scss";
-@import "header.scss";
-@import "sponsor-section";
+@import './_mixins';
+@import './_variables';
+@import './fonts';
+@import './header';
+@import './sponsor-section';
+@import './revolutionary-editor-section';
+@import './our-benefits-section';
+@import './price-section';
+
 
 * {
     margin: 0;
@@ -8,16 +14,7 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: Montserrat;
-}
-
 a, ul, li {
     list-style: none;
     text-decoration: none;
-}
-
-.wrapper {
-    max-width: 1220px;
-    margin: auto;
 }
