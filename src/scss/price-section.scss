@@ -1,7 +1,7 @@
 .price {
   margin-top: -13px;
   overflow: hidden;
-  background-image: url("../dist/img/price-section/price-section-background.png");
+  background-image: url("../img/price-section-background.png");
 
   &__header {
     @include font($main-font, 700, 48px, 50px, normal);
