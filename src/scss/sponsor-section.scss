@@ -1,0 +1,107 @@
+.section {
+    &__background {
+        background-image: url(../img/testmonials-bg.png);
+        height: fit-content;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__wrapper {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center
+    }
+    
+    &__title {
+        @include font($main-font, 700, 48px, 50px, normal);
+        color: $accent-color;
+        padding: 108px 10px 75px;
+    }
+
+    &__contents {
+        @include flex(flex, space-between, center);
+        flex-wrap: wrap;
+        gap: 113px 0;
+        padding: 0 10px;
+    }
+
+    &__content {
+        text-align: center;
+            &:nth-child(3) &-paragraph{
+                margin-top: 22px;
+            }
+            &:nth-child(3) &-img{
+                margin-top: -6px;
+            }
+            &-paragraph {
+                @include font($secondary-font, 700, 16px, 24px, normal);
+                font-style: italic;
+                max-width: 350px;
+                color: $accent-color;
+                margin-top: 30px;
+            }
+    }
+
+    &__footer-paragraph {
+        @include font($secondary-font, 400, 14px, 21px, normal);
+        color: #A291A5;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 119px 10px 26px;
+            &:after {
+                content: '';
+                display: block;
+                height: 2px;
+                background: #645766;
+                margin-top: 19px;
+            }
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 992.98px) {
+    .section__title {
+        @include font($main-font, 700, 42px, 44px, normal);
+        padding: 86px 10px 80px;
+    }
+
+    .section__contents {
+        gap: 60px 0;
+    }
+
+    .section__content {
+        &:nth-child(3) &-img{
+            margin-top: -15px;
+        }
+        &:nth-child(4) &-img{
+            margin-top: 15px;
+        }
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 720px) {
+    .section {
+        &__content {
+            width: 50%;
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480.98px) {
+    .section {
+        &__title {
+            @include font($main-font, 700, 36px, 48px, normal);
+            padding: 86px 10px 80px;
+        }
+    
+        &__contents {
+            justify-content: center;
+            gap: 45px 0;
+        }
+    
+        &__footer-paragraph {
+            padding: 37px 10px 22px;
+        }
+    }
+}

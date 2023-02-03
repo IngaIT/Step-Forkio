@@ -4,64 +4,53 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
+        &__wrapper {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center
+        }
+        
         &__container-content {
-            display: flex;
-            justify-content: space-between;
+            @include flex(flex, space-between, center);
             height: 100px;
             padding: 0 10px;
         }
 
         &__logo {
-            display: flex;
-            align-items: center;
+            @include flex(flex, center, center);
             gap: 17px;
-
-                &__icon {
-
-                }
-
-                &__name {
-                    font-family: 'Lato';
-                    font-weight: 700;
-                    font-size: 24px;
-                    text-transform: uppercase;
-                    color: #8D81AC;
+                &-name {
+                    @include font($secondary-font, 700, 24px, 16px, uppercase);
+                    color: $select-color;
                         &:hover {
-                            color: #fff;
+                            color: $accent-color;
                         }
                 }
         }
-
-        &__button-background {
-            display: flex;
-            align-items: center;
-        }
         
         &__buy-button {
-            font-weight: 700;
-            font-size: 16px;
-            color: #fff;
-            background: #8D81AC;
+            @include font($main-font, 700, 16px, 17px, normal);
+            color: $accent-color;
+            background: $select-color;
             border-radius: 40px;
             padding: 11px 35px; 
             transition: ease 0.5s;  
             &:hover {
-                background: #fff;
+                background: $accent-color;
             }
 
             &:hover {
-                color: #8D81AC;
+                color: $select-color;
             }
 
             &:hover {
-                border: 1px solid #8D81AC;
+                border: 1px solid $accent-color;
             } 
         }
 
         &__burger-menu {
-            display: none;
-            justify-content: flex-end;
+            @include flex(none, flex-end, center);
             width: 26px;
             height: 37px;
             cursor: pointer;
@@ -73,7 +62,7 @@
          }
         
         &__burger-container-menu span {
-            background-color: white;
+            background-color: $accent-color;
             height: 3px;
             position: absolute;
             bottom: 10px;
@@ -102,7 +91,7 @@
         &__burger-menu.active span:first-child,
         &__burger-menu.active span:last-child {
             top: 17px;
-            background-color: white;
+            background-color: $accent-color;
         }
         
         &__burger-menu.active span:first-child {
@@ -118,8 +107,7 @@
         }
         
         &__menu {
-            display: flex;
-            justify-content: space-between;
+            @include flex(flex, space-between, 0);
             position: relative;
             top: -59px;
             width: 44%;
@@ -127,41 +115,32 @@
         }
 
         &__menu-link {
-            font-weight: 700;
-            font-size: 16px;
-            color: #8D81AC; 
+            @include font($main-font, 700, 16px, 17px, normal);
+            color: $select-color; 
                 &:hover {
-                    color: #fff;
+                    color: $accent-color;
                 }
         }
 
         &__content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include flex(flex, center, center);
             flex-direction: column;
             gap: 19px;
             margin: 83px 0 426px;
             padding: 0 10px;
 
                 &__title {
-                    font-weight: 700;
-                    font-size: 82px;
-                    color: #fff;
+                    @include font($main-font, 700, 82px, 82px, normal);
+                    color: $accent-color;
                 }
                 
                 &__subtitle {
-                    font-family: Lato;
-                    font-weight: 400;
-                    font-size: 30px;
-                    color: #8D81AC;
-                    text-align: center;
+                    @include font($secondary-font, 400, 30px, 30px, normal);
+                    color: $select-color;
                 }
 
                 &__version-link {
-                    font-weight: 400;
-                    font-size: 16px;
-                    text-transform: uppercase;
+                    @include font($main-font, 400, 16px, 16px, uppercase);
                     color: #848E97;
                 }
         }
@@ -175,154 +154,165 @@
         }
 
         &__download-button-cover {
-            display: flex;
-            justify-content: center;
+            @include flex(flex, center, center);
                 &__button-text {
-                    background: #8D81AC;
+                    @include font($main-font, 700, 21px, 22px, normal);
+                    background: $select-color;
                     border-radius: 40px;
                     padding: 23px 61px;
-                    font-weight: 700;
-                    font-size: 21px;
-                    color: #FFFFFF;
+                    color: $accent-color;
                     transition: ease 0.5s;  
-                    border: 1px solid #8D81AC; 
+                    border: 1px solid $select-color; 
                         &:hover {
-                            background: #fff;
+                            background: $accent-color;
                         }
 
                         &:hover {
-                            color: #8D81AC;
+                            color: $select-color;
                         }
 
                         &:hover {
-                            border: 1px solid #8D81AC;
+                            border: 1px solid $select-color;
                         }
                 }
         }
 
         &__download-button-trial {
-            display: flex;
-            justify-content: center;
-            font-weight: 400;
-            font-size: 14px;
+            @include flex(flex, center, center);
+            @include font($main-font, 400, 14px, 15px, normal);
             color: #848E97;
         }
 }
 
-@media (min-width: 481px) and (max-width: 992.98px) {
-    .header__background {
-        width: 100%;
-        height: 118px;
-        background: #27262A;
-    }
+@media screen and (min-width: 481px) and (max-width: 992.98px) {
+    .header {
+        &__background {
+            width: 100%;
+            height: 118px;
+            background: #27262A;
+        }
 
-    .header__menu  {
-        top: -18px;
-        left: 0;
-        width: 100%;
-        justify-content: center;
-        gap: 6%;
-    }
-    
-    .header__content__title {
-        font-size: 72px;
-    }
+        &__menu  {
+            top: -18px;
+            left: 0;
+            width: 100%;
+            justify-content: center;
+            gap: 6%;
+        }
+        
+        &__content {
+            &__title {
+                @include font($main-font, 700, 72px, 72px, normal);
+            }
+        }
 
-    .header__content__subtitle {
-        font-size: 24px;
-    }
+        &__content {
+            &__subtitle {
+                @include font($secondary-font, 400, 24px, 24px, normal);
+            }
+        }
 
-    .header__content__version-link {
-        font-size: 14px;
+        &__content {
+            &__version-link {
+                @include font($main-font, 400, 14px, 14px, uppercase);
+            }
+        }
     }
 }
 
-@media (min-width: 320px) and (max-width: 480.98px) {
-    .header__background {
-        width: 100%;
-        height: 103px;
-        background: #27262A;
-    }
-
-    .header__logo__name {
-        display: none;
-    }
-
-    .header__container-menu {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
+@media screen and (min-width: 320px) and (max-width: 480.98px) {
+    .header {
+        &__background {
+            width: 100%;
+            height: 103px;
+            background: #27262A;
+        }
     
-    .header__menu {
-        width: 292px;
-        top: 3px;
-        left: 0px;
-        flex-direction: column;
-        padding-bottom: 27px;
-        background: #333333;
-            &.active {
-                display: none;
+        &__logo-name {
+            display: none;
+        }
+    
+        &__container-menu {
+            @include flex(flex, center, center);
+            width: 100%;
+        }
+        
+        &__menu {
+            width: 292px;
+            top: 3px;
+            left: 0px;
+            flex-direction: column;
+            padding-bottom: 27px;
+            background: #333333;
+                &.active {
+                    display: none;
+                }
+    
+                & li {
+                    @include flex(flex, 0, center);
+                    height: 88px;
+                    border-bottom: 3px solid #3B3B3B;
+                    position: relative;
+                        &:hover::before {
+                            content: '';
+                            border-left: 8px solid $select-color;
+                            height: 53px;
+                            position: absolute;
+                            left: 2px;
+                        }
+                }
+    
+        &-link {
+            @include font($main-font, 400, 26px, 26px, normal);
+            margin-left: 35px;
+            color: $accent-color;
+            transition: ease 0.3s;
+                &:hover {
+                    transform: translate(4px, 0);
+                }
+
+                &:active {
+                    color: $select-color;
+                }
             }
-
-            & li {
-                height: 88px;
-                display: flex;
-                align-items: center;
-                border-bottom: 3px solid #3B3B3B;
-                position: relative;
-                    &:hover::before {
-                        content: '';
-                        border-left: 8px solid #8D81AC;
-                        height: 53px;
-                        position: absolute;
-                        left: 2px;
-                    }
-                 
+        }
+    
+        &__buy-button {
+            font-size: 15px;
+        }
+    
+        &__burger-container-menu {
+            @include flex(flex, 0, center);
+       }
+    
+        &__burger-menu {
+            display: flex;
+            position: relative;
+        }
+    
+        &__content {
+            &__title {
+                @include font($main-font, 700, 48px, 48px, normal);
             }
-
-            .header__menu-link {
-                font-weight: 400;
-                margin-left: 35px;
-                font-size: 26px;
-                color: #FFFFFF;
-
-                    &:active {
-                        color: #8D81AC;
-                    }
+        }
+    
+        &__content {
+            &__subtitle {
+                @include font($main-font, 400, 18px, 24px, capitalize);
             }
-    }
-
-    .header__buy-button {
-        font-size: 15px;
-    }
-
-    .header__burger-container-menu {
-        display: flex;
-        align-items: center;
-   }
-
-    .header__burger-menu {
-        display: flex;
-        position: relative;
-    }
-
-    .header__content__title {
-        font-size: 48px;
-    }
-
-    .header__content__subtitle {
-        font-family: Montserrat;
-        text-transform: capitalize;
-        font-size: 18px;
-    }
-
-    .header__content__version-link {
-        font-size: 14px;
-    }
-
-    .header__download-button-cover__button-text {
-        font-size: 18px;
-        padding: 15px 29px;
+        }
+    
+        &__content {
+            &__version-link {
+                @include font($main-font, 400, 14px, 14px, uppercase);
+            }
+        }
+    
+        &__download-button-cover {
+            &__button-text {
+                @include font($main-font, 700, 18px, 20px, normal);
+                padding: 15px 29px;
+            }
+        }
     }
 }
