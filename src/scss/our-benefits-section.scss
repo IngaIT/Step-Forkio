@@ -4,7 +4,7 @@
   &__container {
     max-width: 1200px;
     margin: 0 auto;
-    padding-top: 100px;
+    padding: 100px 10px 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
