@@ -1,0 +1,166 @@
+.price {
+  margin-top: -13px;
+  overflow: hidden;
+  background-image: url("../img/price-section-bg.png");
+
+  &__header {
+    @include font($main-font, 700, 48px, 50px, normal);
+    padding: 85px 0 60px 0;
+    color: $accent-color;
+  }
+
+  &__list {
+    padding-bottom: 100px;
+    gap: 10px;
+    @include grid(grid, center, center);
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+
+    &-el {
+      background-color: $priceListBackground;
+      max-width: 260px;
+      width: 260px;
+      height: 515px;
+
+      &_state_active {
+        background-color: #463048;
+        height: 600px;
+        width: 300px;
+      }
+    }
+  }
+
+  &__name {
+    height: 100px;
+    @include flex(flex, center, center);
+    background-color: $priceListBackgroundOpacity;
+
+    &_state_active {
+      height: 100px;
+      @include flex(flex, center, center);
+      background-color: rgba(0, 0, 0, 0.11);
+    }
+
+    &-text {
+      @include font($main-font, 400, 24px, 24px, uppercase);
+      color: $accent-color;
+      text-align: center;
+    }
+  }
+
+  &__costs-wrapper {
+    margin: 30px 0 85px 0;
+    position: relative;
+
+    &:before {
+      content: " ";
+      position: absolute;
+      max-width: 60px;
+      height: 5px;
+      background: $select-color;
+      width: 100%;
+      left: 50%;
+      bottom: -40%;
+      transform: translateX(-50%);
+    }
+
+    &_state_active {
+      position: relative;
+
+      &:before {
+        bottom: -50%;
+      }
+    }
+  }
+
+  &__costs {
+    @include font($main-font, 700, 60px, 90px, uppercase);
+    color: $accent-color;
+    padding-bottom: 10px;
+
+    &_state_active {
+      padding-bottom: 16px;
+      font-size: 82px;
+      line-height: 90px;
+    }
+
+
+    & span {
+      font-weight: 400;
+    }
+
+    &-text {
+      color: $accent-color;
+      @include font($main-font, 400, 14px, 16px, uppercase);
+    }
+  }
+
+  &__link-wrapper {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &_state_active {
+      justify-content: space-around;
+      height: 250px;
+    }
+  }
+
+  &__link-text {
+    color: $accent-color;
+    @include font($main-font, 400, 16px, 18px, normal);
+    margin-bottom: 45px;
+  }
+
+  &__link {
+    margin: 0 auto;
+    display: block;
+    @include font($main-font, 400, 15px, 15px, uppercase);
+    color: $accent-color;
+    text-decoration: none;
+    background: $priceListBackground;
+    padding: 15px 38px;
+    border-radius: 40px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 992px) {
+  .price {
+    &__header {
+      font-size: 42px;
+      line-height: 44px;
+    }
+
+    &__list {
+      column-gap: 20px;
+      justify-content: center;
+      grid-template-rows: 560px 560px;
+      grid-template-columns: 270px 270px;
+      gap: 25px;
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .price {
+    &__header {
+      font-size: 28px;
+      line-height: 42px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    &__list {
+      column-gap: 20px;
+      justify-content: center;
+      grid-template-columns: 270px;
+      gap: 25px;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+
+

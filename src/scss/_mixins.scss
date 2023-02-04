@@ -1,0 +1,50 @@
+@mixin section-font {
+  font-family: $main-font;
+  font-style: normal;
+}
+
+@mixin padding-LR($padding-left, $padding-right) {
+  padding-left: $padding-left;
+  padding-right: $padding-right;
+}
+
+@mixin keyframes($name) {
+  @keyframes #{$name}{
+    @content;
+  }
+}
+
+@mixin animate($animation, $duration, $method, $times) {
+  animation: $animation $duration $method $times;
+}
+
+@mixin grid($display,$align-items, $place-items){
+  display: $display;
+  align-items: $align-items;
+  place-items: $place-items;
+}
+@mixin flex($display,$justify, $align){
+  display: $display;
+  justify-content: $justify;
+  align-items:  $align;
+}
+
+@mixin font(
+  $font-family,
+  $font-weight,
+  $font-size,
+  $line-height,
+  $text-transform,
+) {    
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+  text-transform: $text-transform;
+}
+
+
+
+
+

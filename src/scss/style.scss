@@ -1,0 +1,19 @@
+@import './_mixins';
+@import './_variables';
+@import "./fonts.scss";
+@import "./header.scss";
+@import './revolutionary-editor-section';
+@import './our-benefits-section';
+@import './sponsor-section';
+@import './price-section';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a, ul, li {
+    list-style: none;
+    text-decoration: none;
+}

@@ -8,7 +8,7 @@
     "dev": "gulp",
     "build": "gulp build --build"
   },
-  "author": "Dima Shustov",
+  "author": "Inga Chekalenko, Dima Shustov",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.20.12",

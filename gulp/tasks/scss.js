@@ -15,7 +15,7 @@ export const scss = () => {
                 app.plugins.plumber(
                     app.plugins.notify.onError({
                         title: 'SCSS',
-                        message: 'Error: <%= erroe.message %>',
+                        message: 'Error: <%= error.message %>',
                     })
                 )
             )
