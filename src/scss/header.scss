@@ -28,7 +28,30 @@
                         }
                 }
         }
+
+        &__logo-list {
+            width: 43px;
+            height: 41px;
+            position: relative;
+                &:hover .header__logo-main{
+                    display: none;
+                }
+        }
+
+        &__logo-main {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 2;
+        }
         
+        &__logo-hover {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+
         &__buy-button {
             @include font($main-font, 700, 16px, 17px, normal);
             color: $accent-color;

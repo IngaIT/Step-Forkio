@@ -1,6 +1,11 @@
-<<<<<<<<< Temporary merge branch 1
-@import "fonts.scss";
-@import "header.scss";
+@import './_mixins';
+@import './_variables';
+@import "./fonts.scss";
+@import "./header.scss";
+@import './revolutionary-editor-section';
+@import './our-benefits-section';
+@import './sponsor-section';
+@import './price-section';
 
 * {
     margin: 0;
@@ -8,23 +13,7 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: Montserrat;
-}
-
 a, ul, li {
     list-style: none;
     text-decoration: none;
 }
-
-.wrapper {
-    max-width: 1220px;
-    margin: auto;
-}
-=========
-@import './_mixins';
-@import './_variables';
-@import './revolutionary-editor-section';
-@import './our-benefits-section';
-@import './price-section';
->>>>>>>>> Temporary merge branch 2
