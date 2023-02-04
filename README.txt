@@ -43,4 +43,6 @@ Step Project "Forkio"
     Зверстати секцію Here is what you get.
     Зверстати секцію Fork Subscription Pricing.
 
-Посилання на проект:
+Посилання на сайт:
+
+https://ingait.github.io/Step-Forkio/
